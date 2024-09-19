@@ -1,13 +1,4 @@
-table {
-  width: 100%;
-}
-
-th.mat-header-cell,
-td.mat-cell {
-  text-align: left;
-  padding: 8px;
-}
-
-.mat-elevation-z8 {
-  margin: 20px;
+tr.mat-mdc-row:hover {
+  background-color: rgb(240, 240, 240);
+  cursor: pointer;
 }
