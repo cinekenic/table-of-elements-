@@ -1,18 +1,8 @@
-import {
-  Component,
-  OnInit,
-  Signal,
-  TemplateRef,
-  ViewChild,
-  inject,
-  signal,
-} from '@angular/core';
+import { Component, OnInit, Signal, inject } from '@angular/core';
 import { ServerMockService } from '../../api/services/server-mock.service';
-import { EditDialogData, PeriodicElement } from '../../interfaces';
-import { BehaviorSubject, debounceTime, map } from 'rxjs';
+import { PeriodicElement } from '../../interfaces';
 import { TableRendererComponent } from '../table-renderer/table-renderer.component';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { TableSignalService } from '../table-renderer/services/table-signal.service';
 import { DialogElementsComponent } from '../dialog-elements/dialog-elements.component';
 
