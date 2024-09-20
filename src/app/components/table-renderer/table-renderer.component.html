@@ -50,35 +50,3 @@
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
 </table>
-
-<ng-template #editDialog let-data let-dialogRef="dialogRef">
-  <h2 mat-dialog-title>Edit {{ data.fieldToEdit | titlecase }}</h2>
-  <mat-dialog-content>
-    <ng-container [ngSwitch]="data.fieldToEdit">
-      <mat-form-field *ngSwitchCase="'position'">
-        <mat-label>Position</mat-label>
-        <input matInput [(ngModel)]="data.newValue" type="number" />
-      </mat-form-field>
-
-      <mat-form-field *ngSwitchCase="'name'">
-        <mat-label>Name</mat-label>
-        <input matInput [(ngModel)]="data.newValue" />
-      </mat-form-field>
-
-      <mat-form-field *ngSwitchCase="'weight'">
-        <mat-label>Weight</mat-label>
-        <input matInput [(ngModel)]="data.newValue" type="number" />
-      </mat-form-field>
-
-      <mat-form-field *ngSwitchCase="'symbol'">
-        <mat-label>Symbol</mat-label>
-        <input matInput [(ngModel)]="data.newValue" />
-      </mat-form-field>
-    </ng-container>
-  </mat-dialog-content>
-
-  <mat-dialog-actions>
-    <button mat-button (click)="save(dialogRef, data)">Save</button>
-    <button mat-button mat-dialog-close>Cancel</button>
-  </mat-dialog-actions>
-</ng-template>
