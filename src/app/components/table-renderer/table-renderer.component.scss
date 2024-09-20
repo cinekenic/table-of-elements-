@@ -2,3 +2,23 @@ tr.mat-mdc-row:hover {
   background-color: rgb(240, 240, 240);
   cursor: pointer;
 }
+
+.full-width-table {
+  width: 100%;
+}
+
+.no-data-card {
+  text-align: center;
+  margin: 20px auto;
+  width: 50%;
+}
+
+mat-card-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+mat-card-content p {
+  font-size: 1rem;
+  color: #757575;
+}
