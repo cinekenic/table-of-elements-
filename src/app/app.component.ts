@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { TableRendererComponent } from './components/table-renderer/table-renderer.component';
+import { TableOfPeriodicElementsComponent } from './components/table-of-periodic-elements/table-of-periodic-elements.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, TableRendererComponent],
+  imports: [RouterOutlet, TableOfPeriodicElementsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
