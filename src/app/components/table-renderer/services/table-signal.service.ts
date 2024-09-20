@@ -1,4 +1,4 @@
-import { Injectable, Signal, inject, signal } from '@angular/core';
+import { Injectable, Signal, signal } from '@angular/core';
 import { PeriodicElement } from '../../../interfaces';
 import { BehaviorSubject, debounceTime, map } from 'rxjs';
 
@@ -20,10 +20,10 @@ export class TableSignalService {
 
   updateElementsSignal(newValue: PeriodicElement[]) {
     this.elements.set(newValue);
+    this.originalElements.next(newValue);
   }
 
   applyFilter(event: KeyboardEvent) {
-    console.log(event);
     const inputElement = event.target as HTMLInputElement;
     const filterValue = inputElement.value.toLowerCase();
 
@@ -39,7 +39,6 @@ export class TableSignalService {
         )
       )
       .subscribe((filteredData) => {
-        console.log(filteredData);
         this.elements.set(filteredData);
       });
   }
