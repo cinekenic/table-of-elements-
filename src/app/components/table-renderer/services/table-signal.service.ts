@@ -32,7 +32,9 @@ export class TableSignalService {
         debounceTime(2000),
         map((elements) =>
           elements.filter((element) =>
-            Object.values(element).join(' ').toLowerCase().includes(filterValue)
+            Object.values(element).some((value) =>
+              String(value).toLowerCase().startsWith(filterValue)
+            )
           )
         )
       )
